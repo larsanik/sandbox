@@ -25,10 +25,15 @@ def leap_year (year):
 def num_days_mon(num_mon, year):
     list_days = [31, [28, 29], 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     if num_mon == "2":
-        ...
+        if leap_year(year):
+            return list_days[int(num_mon)-1][1]
+        else:
+            return list_days[int(num_mon)-1][0]
+    return list_days[int(num_mon)-1]
 
-# while True:
-#     year = input("Enter year: ")
-#     print(leap_year(year))
-#     if input("Сontinue?") != "":
-#         break
+while True:
+    num_mon = input("Enter month: ")
+    year = input("Enter year: ")
+    print("Amount of days: ", num_days_mon(num_mon, year))
+    if input("Сontinue (y/n)? ") != "y":
+        break
