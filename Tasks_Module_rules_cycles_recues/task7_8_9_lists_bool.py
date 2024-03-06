@@ -12,3 +12,4 @@ print(my_list)
 my_list = [2, 4, 8]
 
 # way 2
+my_list = [2, 4, 8]
