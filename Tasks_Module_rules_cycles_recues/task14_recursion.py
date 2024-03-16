@@ -22,4 +22,5 @@ def rec():
     d = d + float(val)
     rec()
 
+
 rec()
