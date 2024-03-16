@@ -10,12 +10,16 @@ print('Задача №14. Рекурсии')
 # принято решение, производить ли еще один рекурсивный вызов.
 # Ваша функция не должна принимать аргументов, а возвращать будет числовое значение.
 
-def integrator():
-    num = int(input('Enter num: '))
-    if num != "":
-        integrator()
-        res = res + int(num)
-    else:
-        print(res)# return res
+d = 0.0
 
-integrator()
+
+def rec():
+    global d
+    val = input('digit: ')
+    if val == '':
+        print(d)
+        return d
+    d = d + float(val)
+    rec()
+
+rec()
