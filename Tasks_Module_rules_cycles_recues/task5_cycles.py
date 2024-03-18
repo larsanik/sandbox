@@ -3,7 +3,7 @@
 x = 10
 y = 0
 
-while x == 5:
+while x != 5:
     y = y + 2*y -3
     x = x-1
 

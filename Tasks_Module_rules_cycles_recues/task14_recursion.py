@@ -10,17 +10,27 @@ print('Задача №14. Рекурсии')
 # принято решение, производить ли еще один рекурсивный вызов.
 # Ваша функция не должна принимать аргументов, а возвращать будет числовое значение.
 
-d = 0.0
+# d = 0.0
+#
+#
+# def rec():
+#     global d
+#     val = input('digit: ')
+#     if val == '':
+#         print(d)
+#         return d
+#     d = d + float(val)
+#     rec()
+#
+#
+# rec()
 
+def add_numbers():
+    user_input = input("Введите число: ")
+    if user_input == "":
+        return 0.0
+    else:
+        return float(user_input) + add_numbers()
 
-def rec():
-    global d
-    val = input('digit: ')
-    if val == '':
-        print(d)
-        return d
-    d = d + float(val)
-    rec()
-
-
-rec()
+sum = add_numbers()
+print("Сумма чисел составляет:", sum)

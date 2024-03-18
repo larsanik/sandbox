@@ -1,18 +1,20 @@
 print('Задача №13. Списки')
 print('Введите целое число, кроме ноля. Ноль завершит программу.')
 
-dig_list = []
 
-while True:
-    dig_int = input('?: ')
-    if dig_int == "0":
-        break
-    dig_list.append(dig_int)
+def f_dig_list():
+    dig_list = []
+    while True:
+        dig_int = int(input('?: '))
+        if dig_int == 0:
+            break
+        dig_list.append(dig_int)
+    return dig_list
 
-dig_list.sort()
+
+num = f_dig_list()
 
 print('Список чисел в порядке возрастания:')
 
-for el in dig_list:
+for el in sorted(num):
     print(el)
-
