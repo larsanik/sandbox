@@ -12,9 +12,9 @@ def del_comments(f_src, f_target):
     else:
         # выполняем код по удалению комментариев
         for el in f_src_lines:
-            ft.write(el.split('#', 1)[0])
+            ft.write(el.split('#', 1)[0])  # TODO Этот кусок парсится неправильно
             print(el)
-            print(el.split('#', 1)[0])
+            print(el.split('#', 1)[0])  # TODO Этот кусок парсится неправильно
             ...
         ft.close()
 
