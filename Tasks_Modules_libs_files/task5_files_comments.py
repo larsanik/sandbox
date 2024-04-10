@@ -1,4 +1,19 @@
+# Программа удаляет комментарии из файла источника и записывает код в указанный файл.
 def del_comments(f_src, f_target):
+    try:
+        # открываем файлы
+        with open(f_src, 'r', encoding='utf-8') as f:
+            f_src_lines = f.readlines()
+        open(f_target, 'w', encoding='utf-8')
+    except:
+        # обрабатываем ошибки
+        print('Произошла ошибка. Программа будет завершена.')
+        exit(42)
+    else:
+        # выполняем код по удалению комментариев
+        for el in f_src_lines:
+
+            ...
     ...
 
 
