@@ -1,5 +1,5 @@
 def concat_files(*args):
-    if args != ():
+    if args != ():  # TODO вриаант проверки от Eduson if len(args) == 0:
         rc = open('res.txt', 'w', encoding='utf-8')
         rc.close()
         r = open('res.txt', 'a', encoding='utf-8')

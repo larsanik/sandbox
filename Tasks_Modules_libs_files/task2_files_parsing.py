@@ -10,6 +10,7 @@ def long_word(namefile, encoding):
     # находим самое длинное слово
     max_long = 0
 
+    # TODO слишком прямолинейно. Для последовательностйе есть волшебная функция max(min) с ключом key=len
     for el in words_list:
         if max_long < len(el):
             max_long = len(el)
@@ -25,6 +26,7 @@ def long_word(namefile, encoding):
     return max_long, list_long_words
 
 
+# TODO хорошие программисты запрашивают файл с путем к нему через функцию input, а не впаривают стринги =о)
 # вызов функции
 res = long_word('text.txt', 'utf-8')
 
