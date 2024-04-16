@@ -12,10 +12,9 @@ def del_comments(f_src, f_target):
     else:
         # выполняем код по удалению комментариев
         for el in f_src_lines:
-            ft.write(el.split('#', 1)[0])  # TODO Этот кусок парсится неправильно
-            print(el)
-            print(el.split('#', 1)[0])  # TODO Этот кусок парсится неправильно
-            ...
+            lin = el.split('#', 1)[0]  # TODO Этот кусок парсится неправильно. Если встречается # в коде, то режет код.
+            if lin.strip() != '' or el.strip() == '':
+                ft.write(lin)
         ft.close()
 
 
@@ -24,4 +23,4 @@ print('Программа удаляет комментарии из файла 
 # f_target = input('Введите наименование целевого файла: ')
 
 # del_comments(f_src, f_target)
-del_comments('task5_files_comments.py', 'no_comments.py')
+del_comments('task2_files_parsing.py', 'no_comments.py')

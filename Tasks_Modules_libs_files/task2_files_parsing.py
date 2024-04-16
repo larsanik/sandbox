@@ -24,6 +24,7 @@ def long_word(namefile, encoding):
     # возвращаем результаты
     return max_long, list_long_words
 
+
 # вызов функции
 res = long_word('text.txt', 'utf-8')
 
