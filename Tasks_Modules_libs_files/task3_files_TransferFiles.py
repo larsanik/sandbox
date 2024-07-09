@@ -10,7 +10,7 @@ def transfer_files(file_1, file_2):
     for el in my_lines:
         out_file.write(str(ln) + ': ' + el)
         ln += 1
-    out_file.close()
+    //out_file.close()
 
     # TODO более годный вариант от Eduson
     #  with open(new_file_name, "w") as new_file:
